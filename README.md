@@ -4,11 +4,11 @@ using namespace std;
 
 int main() {
 int n;
-int x=1+(rand() % 101);
+int x=1+(rand() % 21);
 int c=5;
 
 cout<<"Welcome to Guess the Number\n";
-cout<<"You are given 5 chances to guess a Number between 1 to 100\n";
+cout<<"You are given 5 chances to guess a Number between 1 to 20\n";
 cout<<"Only 1 in 5 People can win this game\n\n";
 
 
@@ -22,7 +22,7 @@ if(n==x)
     printf("You are among the Top %d % of People\n",c*4);
     break;
 }
-else if(c>0)
+else if(c>1)
 {
     c--;
     cout<<"Wrong Answer :(\n";
@@ -31,6 +31,7 @@ else if(c>0)
 else
 {
     cout<<"Wrong Answer, There goes your last chance\n";
+    cout<<"Correct Answer is "<< x << endl;
     cout<<"Better luck next time";
 }
 }
