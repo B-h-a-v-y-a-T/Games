@@ -20,7 +20,7 @@ while(c>0)
 if(n==x)
 {
     cout<<"You Win!!";
-    printf("You are among the Top %d % of People\n",c*4);
+    printf("You win %d points\n",c*4);
     break;
 }
 else if(c>1)
