@@ -4,6 +4,7 @@ using namespace std;
 
 int main() {
 int n;
+srand(time(0));
 int x=1+(rand() % 21);
 int c=5;
 
