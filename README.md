@@ -8,7 +8,7 @@ int x=1+(rand() % 21);
 int c=5,k=x;
 int rev;
 
-cout<<"Welcome to Guess the Number\n\n";
+cout<<"Welcome to Number Hunt\n\n";
 cout<<"You are given 5 chances to guess a Number between 1 to 20\n";
 cout<<"Only 1 in 5 People can win this game\n\n";
 
