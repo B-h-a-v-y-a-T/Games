@@ -1,4 +1,3 @@
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -6,7 +5,6 @@ int main() {
 int n;
 srand(time(0));
 int x=1+(rand() % 21);
-
 int c=5,k=x;
 int rev;
 
@@ -15,7 +13,7 @@ cout<<"You are given 5 chances to guess a Number between 1 to 20\n";
 cout<<"Only 1 in 5 People can win this game\n\n";
 
 cout<<"HINTS:\n";
-
+cout<<"If your guess is in the range of 5 numbers(both inclusive) of the required number then it's NEAR otherwise it's FAR\n";
 while(k>0)
 {
     rev=rev*10+k%10;
@@ -34,17 +32,16 @@ else
 {
     cout<<"The reverse of the required Number is equal the number itself\n";
 }
-
 float p=sqrt(x);
 int q=sqrt(x);
 
 if(p-q==0)
 {
-    cout<<"The required number IS a Perfect Square\n";
+    cout<<"The required number IS a Perfect Square\n\n";
 }
 else
 {
-    cout<<"The required number IS NOT a Perfect Square\n";
+    cout<<"The required number IS NOT a Perfect Square\n\n";
 }
 
 while(c>0)
@@ -53,7 +50,7 @@ while(c>0)
     cin>>n;
 if(n==x)
 {
-    cout<<"You Win!!";
+    cout<<"You Win!! ";
     printf("Your Score = %d \n",c*4);
     break;
 }
@@ -61,11 +58,19 @@ else if(c>1)
 {
     c--;
     cout<<"Wrong Answer :(\n";
+    if(n>=(x-5) && n<=(x+5))
+    {
+        cout<<"Your guess is NEAR\n\n";
+    }
+    else
+    {
+        cout<<"Your guess is FAR\n\n";
+    }
     printf("You have %d chances left\n",c);
 }
 else
 {
-    cout<<"Wrong Answer, There goes your last chance\n";
+    cout<<"\nWrong Answer, There goes your last chance\n";
     cout<<"Correct Answer is "<< x << endl;
     cout<<"Better luck next time";
 }
