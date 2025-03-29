@@ -32,16 +32,26 @@ else
 {
     cout<<"The reverse of the required Number is equal the number itself\n";
 }
-float p=sqrt(x);
-int q=sqrt(x);
 
-if(p-q==0)
+int i;
+k=0;
+
+for(i=2;i<=(x/2);i++)
 {
-    cout<<"The required number IS a Perfect Square\n\n";
+    if(x%i==0)
+    {
+      k=1;
+      break;
+    }
+}
+
+if(k==1 || x==1)
+{
+    cout<<"The required number IS NOT a Prime Number\n\n";
 }
 else
 {
-    cout<<"The required number IS NOT a Perfect Square\n\n";
+    cout<<"The required number IS a Prime Number\n\n";
 }
 
 while(c>0)
@@ -60,13 +70,13 @@ else if(c>1)
     cout<<"Wrong Answer :(\n";
     if(n>=(x-5) && n<=(x+5))
     {
-        cout<<"Your guess is NEAR\n\n";
+        cout<<"Your guess is NEAR\n";
     }
     else
     {
-        cout<<"Your guess is FAR\n\n";
+        cout<<"Your guess is FAR\n";
     }
-    printf("You have %d chances left\n",c);
+    printf("You have %d chances left\n\n",c);
 }
 else
 {
